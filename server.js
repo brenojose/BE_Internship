@@ -44,6 +44,11 @@ connectToDb();
 // Route to list all Job Postings for Careers
 app.get('/careers', listAllJobPostingsForCareers);
 
+//Route to use Render deployment and give some response to the main page
+app.get('/', (req, res) => {
+    res.send('Backend deployed on render!');
+});
+
 // Approve job posting by admin
 app.put('/admin/job-postings/:id/approve', approveJobPosting);
 
