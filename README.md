@@ -1,1 +1,3 @@
-# BE_Internship
+## BE_Internship
+
+- **Deployment**: Initialize deployment using render.
