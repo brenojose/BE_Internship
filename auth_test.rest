@@ -1,0 +1,186 @@
+### Sign Up Request
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "name": "John2Doe122",
+  "email": "john2@example.com",
+  "password": "password1234"
+}
+
+### Sign In Request
+POST http://localhost:3000/auth/signin/
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+
+### Contact Form Submission
+POST http://localhost:3000/contact
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "phone": "123-456-7890",
+  "email": "john.doe@example.com",
+  "message": "I would like to schedule an appointment."
+}
+
+### Form Request Job
+POST http://localhost:3000/job-postings
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobTitle"
+
+Software Developer
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobType"
+
+Full-time
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="location"
+
+Toronto
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobDescription"
+
+Develop and maintain web applications.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requiredQualifications"
+
+3+ years of experience in Node.js
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="salaryRange"
+
+100k-120k
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="jobDescriptionFile"; filename="Lorem_ipsum.pdf"
+Content-Type: application/pdf
+
+< C:/Users/n01648753/Desktop/Lorem_ipsum.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### CompanyProfile POST Request Form and File
+POST http://localhost:3000/company-profile
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="companyName"
+
+Tech Innovators
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="industry"
+
+Technology
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="website"
+
+https://www.techinnovators.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="about"
+
+Leading the way in tech innovation.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="contactPerson"
+
+Jane Doe
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="contactEmail"
+
+jane.doe@techinnovators.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="contactPhoneNumber"
+
+123-456-7890
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="companyLogo"; filename="logo.png"
+Content-Type: image/png
+
+< C:\Users\n01648753\Desktop\logo.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+###POST Request to Profile Form and File
+POST http://localhost:3000/profiles
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstName"
+
+John
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="lastName"
+
+Doe
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+johndoe@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="phoneNumber"
+
+123-456-7890
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="bio"
+
+Experienced Web Developer
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="linkedInLink"
+
+https://linkedin.com/in/johndoe
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resumeFile"; filename="resume.docx"
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+
+< C:\Users\n01648753\Desktop\resume.docx
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### PUT Request to Update Profile (Form and File)
+PUT http://localhost:3000/profiles/670082972155ad8c4d9207b2
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstName"
+
+John
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="lastName"
+
+Doe
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+johndoe@example.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="phoneNumber"
+
+123-456-7890
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="bio"
+
+Updated Web Developer Bio
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="linkedInLink"
+
+https://linkedin.com/in/johndoe
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resumeFile"; filename="resume_updated.docx"
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+
+< C:\Users\n01648753\Desktop\resume_updated.docx
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Get All Job Postings for Careers
+GET http://localhost:3000/careers
+Content-Type: application/json
+
+### Approve Job Posting
+PUT http://localhost:3000/admin/job-postings/67008de8ac391724f44a1b8f/approve
+Content-Type: application/json
+
+### Download File
+GET http://localhost:3000/files/1727998902247-4c8a624a6624.pdf
